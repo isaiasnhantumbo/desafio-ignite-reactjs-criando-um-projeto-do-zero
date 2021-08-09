@@ -1,1 +1,84 @@
-// TODO
+.postBanner {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+
+  margin-bottom: 5rem;
+}
+
+.post {
+  max-width: 700px;
+  margin: 0 auto;
+  > div {
+    h1 {
+      color: var(--heading-color);
+
+      font-size: 3rem;
+      line-height: 58px;
+
+      letter-spacing: -0.5px;
+      margin-bottom: 1.5rem;
+    }
+    div {
+      color: var(--info-color);
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      font-size: 0.875rem;
+      line-height: 17px;
+
+      time {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-right: 1.5rem;
+      }
+      p {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-right: 1.5rem;
+      }
+      span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+}
+.postContent {
+  margin-top: 4rem;
+  h2 {
+    color: var(--heading-color);
+
+    font-size: 2.25rem;
+    line-height: 140%;
+    margin-bottom: 2rem;
+  }
+  p {
+    color: var(--body-color);
+    font-size: 1.125rem;
+    line-height: 140%;
+  }
+  p,
+  ul {
+    margin: 1.5rem 0;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+
+    li {
+      color: var(--body-color);
+      margin: 0.5rem 0;
+    }
+  }
+  a {
+    color: var(--highlight-color);
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.7);
+    }
+  }
+}
