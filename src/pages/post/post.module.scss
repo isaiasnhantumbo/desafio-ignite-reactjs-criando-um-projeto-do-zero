@@ -9,6 +9,7 @@
 .post {
   max-width: 700px;
   margin: 0 auto;
+
   > div {
     h1 {
       color: var(--heading-color);
@@ -45,6 +46,13 @@
         gap: 0.5rem;
       }
     }
+    > i {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.875rem;
+      line-height: 17px;
+      color: var(--info-color);
+    }
   }
 }
 .postContent {
@@ -80,5 +88,40 @@
     &:hover {
       filter: brightness(0.7);
     }
+  }
+}
+
+.footer {
+  border-top: 1px solid #d7d7d7;
+  .postNavigation {
+    margin: 3rem 0 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    div + div {
+      text-align: right;
+    }
+    p {
+      width: 25rem;
+      font-size: 1.125rem;
+      line-height: 22px;
+      color: var(--heading-color);
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+    a {
+      font-weight: 600;
+      color: var(--highlight-color);
+      line-height: 19px;
+      letter-spacing: -0.5px;
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+  }
+  button {
+    margin-bottom: 5rem;
   }
 }
