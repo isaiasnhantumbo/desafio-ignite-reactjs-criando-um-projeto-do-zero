@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { Document } from '@prismicio/client/types/documents';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { getPrismicClient } from '../../services/prismic';
@@ -9,10 +11,13 @@ function linkResolver(doc: Document): string {
   return '/';
 }
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+// eslint-disable-next-line consistent-return
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { token: ref, documentId } = req.query;
   const redirectUrl = await getPrismicClient(req)
-    .getPreviewResolver(ref, documentId)
+    .getPreviewResolver(String(ref), String(documentId))
     .resolve(linkResolver, '/');
 
   if (!redirectUrl) {
